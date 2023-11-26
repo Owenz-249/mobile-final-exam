@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPDATE PROFILE"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Update Name -->
+    <TextView
+        android:id="@+id/textViewUpdateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextUpdateName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUpdateName"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your name"
+        android:inputType="text"/>
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/textViewUpdateUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:"
+        android:layout_below="@id/editTextUpdateName"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextUpdateUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUpdateUsername"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your username"
+        android:inputType="text"/>
+
+    <!-- Password -->
+    <TextView
+        android:id="@+id/textViewUpdatePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Password:"
+        android:layout_below="@id/editTextUpdateUsername"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextUpdatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUpdatePassword"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your new password"
+        android:inputType="textPassword"/>
+
+    <!-- Confirm Password -->
+    <TextView
+        android:id="@+id/textViewUpdateConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password:"
+        android:layout_below="@id/editTextUpdatePassword"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUpdateConfirmPassword"
+        android:layout_marginTop="8dp"
+        android:hint="Re-enter your new password"
+        android:inputType="textPassword"/>
+
+    <!-- Pick Date Button -->
+    <Button
+        android:id="@+id/buttonUpdateDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextConfirmPassword"
+        android:layout_marginTop="16dp"
+        android:text="Choose Date of Birth"/>
+
+    <!-- Date of Birth -->
+    <TextView
+        android:id="@+id/textViewUpdateDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth: Not selected"
+        android:layout_below="@id/buttonUpdateDatePicker"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/buttonUpdateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUpdateDOB"
+        android:layout_marginTop="16dp"
+        android:text="Update"/>
+
+</RelativeLayout>
