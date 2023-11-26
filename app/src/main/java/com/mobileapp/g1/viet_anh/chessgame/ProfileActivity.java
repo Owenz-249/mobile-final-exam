@@ -54,7 +54,7 @@ public class ProfileActivity extends AppCompatActivity {
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
                     user2 = intent.getSerializableExtra("user", User.class);
                     modificationIntent.putExtra("user", user2);
-                    startActivity(modificationIntent);
+                    startActivityForResult(modificationIntent, 1); // Chuyển mã requestCode là 1
                     //finish();
                 }
             }
@@ -62,15 +62,13 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-
-
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
             // Nhận dữ liệu người dùng đã được cập nhật từ ModificationActivity
             User updatedUser = (User) data.getSerializableExtra("updatedUser");
+
             Log.d("ProfileActivity", "onActivityResult: requestCode = " + requestCode + ", resultCode = " + resultCode);
             // Cập nhật giao diện người dùng trên luồng chính
             runOnUiThread(new Runnable() {
